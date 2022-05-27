@@ -14,7 +14,7 @@ public interface ToDoService {
 
     void deleteToDoById(Long id);
 
-    ToDoDto editToDo(Long id, ToDoDto toDoDto);
+    ToDoDto editToDo(Long id, ToDoDto toDoDto) throws IllegalArgumentException;
 
-    ToDoDto saveToDo(ToDoDto toDoDto);
+    ToDoDto saveToDo(ToDoDto toDoDto) throws IllegalArgumentException;
 }

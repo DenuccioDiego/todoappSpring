@@ -26,7 +26,7 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-    public ToDoDto saveToDo(ToDoDto toDoDto) {
+    public ToDoDto saveToDo(ToDoDto toDoDto) throws IllegalArgumentException {
 
         Date date = new Date();
         toDoDto.setCreationDate(date);
@@ -79,7 +79,7 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-    public ToDoDto editToDo(Long id, ToDoDto toDoDto) {
+    public ToDoDto editToDo(Long id, ToDoDto toDoDto) throws IllegalArgumentException {
 
         Date date = new Date();
         toDoDto.setCreationDate(date);
