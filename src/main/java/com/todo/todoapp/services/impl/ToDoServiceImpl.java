@@ -98,11 +98,10 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-    public String deleteToDoById(Long id) {
+    public void deleteToDoById(Long id) {
 
         this.toDoRepository.deleteById(id);
 
-        return "Task cancellata";
     }
 
 }

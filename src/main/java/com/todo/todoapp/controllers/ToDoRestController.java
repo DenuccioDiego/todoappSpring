@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/toDo")
 public class ToDoRestController {
 
+    // private static final Logger logger =
+    // LoggerFactory.getLogger(ToDoRestController.class);
+
     private final ToDoService toDoService;
 
     public ToDoRestController(ToDoService toDoService) {
@@ -50,7 +53,7 @@ public class ToDoRestController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteTodo(@PathVariable("id") Long id) {
-        return this.toDoService.deleteToDoById(id);
+    public void deleteTodo(@PathVariable("id") Long id) {
+        this.toDoService.deleteToDoById(id);
     }
 }

@@ -12,7 +12,7 @@ public interface ToDoService {
 
     List<ToDoDto> getToDoByText(String word);
 
-    String deleteToDoById(Long id);
+    void deleteToDoById(Long id);
 
     ToDoDto editToDo(Long id, ToDoDto toDoDto);
 
